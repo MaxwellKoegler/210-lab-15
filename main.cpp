@@ -18,7 +18,7 @@ void setScreenWriter(string w) {
     screenWriter = w;
 }
 string getScreenWriter() {
-    return screenWriter
+    return screenWriter;
 }
 
 void setYearReleased(int y) {
@@ -62,6 +62,12 @@ int main(){
         temp.setScreenWriter(line3);
 
         movies.push_back(temp);
+    }
+
+    for(Movie m : movies){
+        cout << "    Movie: " << m.getTitle() << endl;
+        cout << "Year Released: " << m.getYearReleased() << endl;
+        cout << "Screenwriter: " << m.getScreenWriter() << endl;
     }
 
 }
