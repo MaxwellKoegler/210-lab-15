@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <string>
 
 using namespace std;
 
@@ -33,8 +34,21 @@ string getTitle() {
     return title;
 }
 
+void print() {
+    cout << "Screen Writer: " << screenWriter << endl;
+    cout << "Year released : " << yearReleased << endl;
+    cout << "Title: " << title << endl;
 }
 
+};
+
 int main(){
+    ifstream file("input.txt");
+
+    string line;
+    while(getline(file, line)) {
+        Movie temp = Movie();
+        temp.setTitle(line);
+    }
 
 }
